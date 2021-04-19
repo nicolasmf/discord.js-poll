@@ -9,11 +9,29 @@ discord.js-poll is a Node.js module that allows you to create polls with your di
 
 ## Installation 
 
+<br>
+
 ```
 npm i discord.js-poll
 ```
 
+<br>
+
+## Parameters type
+
+<br>
+
+```JavaScript
+poll(message: Discord.Message, args: string[], separator: string, embedColor: Discord.ColorResolvable)
+```
+
+<br>
+
 ## Usage example
+
+<br>
+
+### Code
 
 ```JavaScript
 const Discord = require('discord.js');
@@ -29,8 +47,20 @@ module.exports = {
 };
 ```
 
-## Parameters type
+### On discord
 
-```JavaScript
-poll(message: Discord.Message, args: string[], separator: string, embedColor: Discord.ColorResolvable)
+This will return an embed message with 'Is this a poll ?' as title and with 👍 and 👎 reactions.
+
 ```
+!poll Is this a poll ?
+```
+
+This will return an embed message with 'What is your favorite food ?' as title and Pasta, Burger and Pizza as fields, with corresponding reactions (🇦 => 🇨).
+
+(If '+' is chosed as separator)
+
+```
+!poll What is your favorite food ? + Pasta + Burgers + Pizza
+```
+
+### ⚠️ You cannot add more than 26 options to the poll. 
