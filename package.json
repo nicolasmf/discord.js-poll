@@ -1,6 +1,6 @@
 {
   "name": "discord.js-poll",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A poll command for discord.js bots",
   "main": "lib/index.js",
   "types": "lib",
