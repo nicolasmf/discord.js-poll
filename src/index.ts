@@ -15,7 +15,7 @@ export async function poll(message: Discord.Message, args: string[], separator: 
 
 		const embed = new Discord.MessageEmbed().setTitle('📊 ' + question).setColor(embedColor);
 
-		await message.channel.send({ embed }).then(msg => {
+		await message.channel.send({ embeds: [embed] }).then(msg => {
 			msg.react('👍');
 			msg.react('👎');
 		});
@@ -71,7 +71,7 @@ export async function poll(message: Discord.Message, args: string[], separator: 
 			.setDescription(arr.join('\n\n'))
 			.setColor(embedColor);
 
-		await message.channel.send({ embed }).then(msg => {
+		await message.channel.send({ embeds: [embed] }).then(msg => {
 			for (let i = 0; i < options.length; i++) {
 				msg.react(alphabet[i]);
 			}
